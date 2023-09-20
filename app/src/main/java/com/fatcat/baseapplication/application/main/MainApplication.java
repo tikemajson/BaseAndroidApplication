@@ -1,4 +1,4 @@
-package com.fatcat.baseapplication.activity;
+package com.fatcat.baseapplication.application.main;
 
 import android.app.Application;
 

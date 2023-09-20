@@ -17,4 +17,9 @@ public class TestServiceImpl implements TestService {
     public String testMethod() {
         return "TEST METHOD MESSAGE";
     }
+
+    @Override
+    public Long getId() {
+       return 1L;
+    }
 }

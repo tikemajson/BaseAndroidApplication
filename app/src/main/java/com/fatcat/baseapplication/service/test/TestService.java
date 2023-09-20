@@ -7,4 +7,6 @@ package com.fatcat.baseapplication.service.test;
 
 public interface TestService {
     String testMethod();
+
+    Long getId();
 }
