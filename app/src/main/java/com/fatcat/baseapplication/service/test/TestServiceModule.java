@@ -17,17 +17,13 @@ import dagger.hilt.components.SingletonComponent;
  * Creation date: 07.09.2023
  */
 
-@Module
+@Module(includes = TestServiceModuleA.class)
 @InstallIn(SingletonComponent.class)
-public abstract class TestServiceModule {
-
-    // https://stackoverflow.com/questions/46618763/dagger2-how-to-use-provides-and-binds-in-same-module
-    @Binds
-    public abstract TestService bindTestService(TestServiceImpl testServiceImpl);
+public class TestServiceModule {
 
     @Provides
     public AccountDatabase provideAccountDatabase(Application application) {
-         Room.databaseBuilder(application.getApplicationContext(), AccountDatabase.class, "account-database").allowMainThreadQueries().build();
+        return Room.databaseBuilder(application.getApplicationContext(), AccountDatabase.class, "account-database").allowMainThreadQueries().build();
     }
 
 }

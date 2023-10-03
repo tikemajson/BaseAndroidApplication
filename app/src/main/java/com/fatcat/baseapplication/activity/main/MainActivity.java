@@ -26,14 +26,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Account account1 = new Account("kiepondo test", "kiepondotest@wp.pl");
 
-        AccountDatabase accountDataBase = Room.databaseBuilder(getApplicationContext(), AccountDatabase.class, "account-database").allowMainThreadQueries().build();
-
-        Account account1 = new Account("kiepondo", "kiepondo@wp.pl");
-        Account account2 = new Account("odbit", "odbit@wp.pl");
-
-        accountDataBase.getDao().insert(account1);
-        List<Account> list = accountDataBase.getDao().getAllAccounts();
+        testService.addAccount(account1);
+        List<Account> list = testService.getAllAccounts();
 
         for (Account acc: list) {
             Log.d("acccounts", acc.getId() + " - " + acc.getName() + " - " + acc.getEmail());

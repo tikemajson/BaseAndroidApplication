@@ -3,6 +3,8 @@ package com.fatcat.baseapplication.service.test;
 import com.fatcat.baseapplication.database.entity.account.Account;
 import com.fatcat.baseapplication.database.entity.account.AccountDatabase;
 
+import java.util.List;
+
 import javax.inject.Inject;
 
 /**
@@ -33,5 +35,10 @@ public class TestServiceImpl implements TestService {
     public Long addAccount(Account account) {
         accountDatabase.getDao().insert(account);
         return null;
+    }
+
+    @Override
+    public List<Account> getAllAccounts() {
+        return accountDatabase.getDao().getAllAccounts();
     }
 }
