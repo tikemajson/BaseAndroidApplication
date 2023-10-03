@@ -4,6 +4,8 @@ import androidx.room.Dao;
 import androidx.room.Insert;
 import androidx.room.Query;
 
+import com.fatcat.baseapplication.database.entity.AbstractDao;
+
 import java.util.List;
 
 /**
@@ -12,11 +14,7 @@ import java.util.List;
  */
 
 @Dao
-public interface AccountDao {
-
-    @Insert
-    void insertAll(Account... accounts);
-
+public interface AccountDao extends AbstractDao<Account> {
     @Query("SELECT * FROM account")
     List<Account> getAllAccounts();
 

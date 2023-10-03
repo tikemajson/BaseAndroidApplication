@@ -32,8 +32,8 @@ public class MainActivity extends AppCompatActivity {
         Account account1 = new Account("kiepondo", "kiepondo@wp.pl");
         Account account2 = new Account("odbit", "odbit@wp.pl");
 
-        accountDataBase.accountDao().insertAll(account1, account2);
-        List<Account> list = accountDataBase.accountDao().getAllAccounts();
+        accountDataBase.getDao().insert(account1);
+        List<Account> list = accountDataBase.getDao().getAllAccounts();
 
         for (Account acc: list) {
             Log.d("acccounts", acc.getId() + " - " + acc.getName() + " - " + acc.getEmail());
