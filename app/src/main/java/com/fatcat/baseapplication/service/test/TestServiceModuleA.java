@@ -6,8 +6,8 @@ import dagger.hilt.InstallIn;
 import dagger.hilt.components.SingletonComponent;
 
 /**
- * Created by: Michal Kowalski
- * Creation date: 03.10.2023
+ * Michal Kowalski
+ * 03.10.2023
  */
 
 @Module

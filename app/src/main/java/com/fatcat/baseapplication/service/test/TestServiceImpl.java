@@ -8,10 +8,9 @@ import java.util.List;
 import javax.inject.Inject;
 
 /**
- * Created by: Michal Kowalski
- * Creation date: 07.09.2023
+ * Michal Kowalski
+ * 07.09.2023
  */
-
 public class TestServiceImpl implements TestService {
 
     @Inject

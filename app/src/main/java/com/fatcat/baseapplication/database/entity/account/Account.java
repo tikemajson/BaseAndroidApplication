@@ -7,10 +7,9 @@ import androidx.room.Ignore;
 import com.fatcat.baseapplication.database.entity.AbstractEntity;
 
 /**
- * Created by: Michal Kowalski
- * Creation date: 12.09.2023
+ * Michal Kowalski
+ * 12.09.2023
  */
-
 @Entity
 public class Account extends AbstractEntity {
 

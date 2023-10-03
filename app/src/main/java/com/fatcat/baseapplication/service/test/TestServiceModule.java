@@ -6,15 +6,14 @@ import androidx.room.Room;
 
 import com.fatcat.baseapplication.database.entity.account.AccountDatabase;
 
-import dagger.Binds;
 import dagger.Module;
 import dagger.Provides;
 import dagger.hilt.InstallIn;
 import dagger.hilt.components.SingletonComponent;
 
 /**
- * Created by: Michal Kowalski
- * Creation date: 07.09.2023
+ * Michal Kowalski
+ * 07.09.2023
  */
 
 @Module(includes = TestServiceModuleA.class)

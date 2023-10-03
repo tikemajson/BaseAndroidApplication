@@ -5,10 +5,9 @@ import com.fatcat.baseapplication.database.entity.account.Account;
 import java.util.List;
 
 /**
- * Created by: Michal Kowalski
- * Creation date: 07.09.2023
+ * Michal Kowalski
+ * 07.09.2023
  */
-
 public interface TestService {
     String testMethod();
 
